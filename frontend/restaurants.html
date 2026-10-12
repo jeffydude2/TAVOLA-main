@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/styles.css"><title>Restaurants | Tavola</title></head><body>
+<main class="page">
+<h1 class="page-title" aria-label="Restaurants"><svg viewBox="0 0 1815 160" aria-hidden="true" focusable="false"><text x="0" y="150" font-size="190" textLength="1815" lengthAdjust="spacingAndGlyphs">RESTAURANTS</text></svg></h1>
+<div class="page-grid">
+ <figure class="page-plate"><img src="assets/img/plate-shrimp-large.webp" alt="" width="900" height="900"></figure>
+ <div class="page-main">
+  <div class="toolbar">
+   <label>Boroughs<span class="field search-field"><select id="fBorough"></select></span></label>
+   <label>Cuisine<span class="field search-field"><select id="fCuisine"></select></span></label>
+  </div>
+  <div class="panel">
+   <div class="panel-head"><p class="small" id="count">&nbsp;</p><button class="btn primary sm" id="addBtn" type="button">Add restaurant</button></div>
+   <div class="tablewrap"><table><thead><tr><th>Name</th><th>Cuisine</th><th>Borough</th><th>Address</th><th>Actions</th></tr></thead><tbody id="rows"><tr class="loading"><td colspan="5">Loading restaurants...</td></tr></tbody></table></div>
+   <div class="pager"><button class="btn sm" id="prev" type="button">Previous</button><span id="pageInfo" class="small"></span><button class="btn sm" id="next" type="button">Next</button></div>
+  </div>
+ </div>
+</div>
+<dialog id="formDialog"><form id="restaurantForm"><h2 id="dlgTitle">Add restaurant</h2><input type="hidden" name="id">
+ <label>Name<input name="name" required maxlength="120"></label>
+ <label>Cuisine<input name="cuisine" required maxlength="80"></label>
+ <label>Borough<select name="borough" required></select></label>
+ <div class="row2"><label>Building<input name="building"></label><label>Street<input name="street"></label></div>
+ <label>Zipcode<input name="zipcode" inputmode="numeric" maxlength="10"></label>
+ <p class="err" id="formError"></p>
+ <div class="dlg-actions"><button class="btn" type="button" id="cancel">Cancel</button><button class="btn primary" type="submit">Save restaurant</button></div></form></dialog>
+</main>
+<script src="assets/js/config.js"></script><script src="assets/js/common.js"></script><script src="assets/js/pages/restaurants.js"></script></body></html>

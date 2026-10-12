@@ -1,0 +1,70 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Find a restaurant | Tavola</title><meta name="description" content="Find, rank and manage restaurants by name, cuisine and borough."><link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="assets/css/styles.css"></head><body>
+<main>
+
+<section class="hero" aria-label="Welcome">
+ <h1 class="hero-title" aria-label="Tavola">
+  <svg viewBox="0 0 1733 300" aria-hidden="true" focusable="false">
+   <text x="0" y="265" font-size="350" textLength="812" lengthAdjust="spacingAndGlyphs">TAV</text>
+   <text x="1135" y="265" font-size="350" textLength="598" lengthAdjust="spacingAndGlyphs">LA</text>
+  </svg>
+  <img class="o-plate" src="assets/img/plate-steak-potatoes.webp" alt="" width="560" height="560">
+ </h1>
+ <img class="plate-small" src="assets/img/plate-steak-lemon.webp" alt="" width="560" height="560">
+ <img class="plate-corner" src="assets/img/plate-corner-steak.webp" alt="" width="1240" height="800">
+ <div class="cta"><a class="btn" href="search.html">Search restaurants</a><a class="btn alt" href="restaurants.html">Browse the full list</a></div>
+</section>
+
+<section class="stats" aria-label="Database totals">
+ <div class="wrap">
+  <span class="tag" style="font-size:1.2rem;color:#fff">Live from Atlas</span>
+  <dl class="stats-row">
+   <div class="stat"><dt>Restaurants</dt><dd id="m-total">0</dd></div>
+   <div class="stat"><dt>Cuisines</dt><dd id="m-cuisines">0</dd></div>
+   <div class="stat"><dt>Boroughs</dt><dd id="m-boroughs">0</dd></div>
+  </dl>
+ </div>
+</section>
+
+<section class="dishes" aria-label="Featured dishes">
+ <div class="wrap">
+  <h2>Dishes worth finding</h2>
+  <div class="carousel" role="group" aria-roledescription="carousel" aria-label="Featured dishes. Select a dish to bring it to the center.">
+   <button class="dish-item" type="button" data-name="Glazed steak with lemon" data-pos="-2"><img src="assets/img/plate-steak-lemon.webp" alt="Glazed steak with lemon and asparagus" width="560" height="560"></button>
+   <button class="dish-item" type="button" data-name="Steak with roast potatoes" data-pos="-1"><img src="assets/img/plate-steak-potatoes.webp" alt="Steak with roast potatoes and salad" width="560" height="560"></button>
+   <button class="dish-item" type="button" data-name="Shrimp linguine" data-pos="0" aria-current="true"><img src="assets/img/plate-shrimp-linguine.webp" alt="Shrimp linguine with basil" width="560" height="560"></button>
+   <button class="dish-item" type="button" data-name="Beef and garlic pasta" data-pos="1"><img src="assets/img/plate-beef-garlic-pasta.webp" alt="Pasta with seared beef and garlic" width="560" height="560"></button>
+   <button class="dish-item" type="button" data-name="Mussel spaghetti" data-pos="2"><img src="assets/img/plate-mussel-spaghetti.webp" alt="Spaghetti with mussels in tomato sauce" width="560" height="560"></button>
+   <button class="dish-item" type="button" data-name="Salmon sushi" data-pos="hidden" tabindex="-1" aria-hidden="true"><img src="assets/img/plate-salmon-sushi.webp" alt="Salmon and avocado sushi rolls" width="560" height="560"></button>
+   <button class="dish-item" type="button" data-name="Beef carpaccio" data-pos="hidden" tabindex="-1" aria-hidden="true"><img src="assets/img/plate-beef-carpaccio.webp" alt="Beef carpaccio with arugula and tomato" width="560" height="560"></button>
+   <button class="dish-item" type="button" data-name="Grilled steak with asparagus" data-pos="hidden" tabindex="-1" aria-hidden="true"><img src="assets/img/plate-steak-asparagus.webp" alt="Grilled steak with potatoes and asparagus" width="560" height="560"></button>
+  </div>
+  <p class="dish-caption" id="dishCaption" aria-live="polite">Shrimp linguine</p>
+ </div>
+</section>
+
+<section class="explore">
+ <div class="wrap">
+  <h2>Three ways to explore</h2>
+  <p class="lead">Each page reads straight from the database.</p>
+  <div class="grid">
+   <a class="card" href="search.html"><img class="dish" src="assets/img/plate-shrimp-linguine.webp" alt="" width="140" height="140"><span class="tag">Search</span><h3>Search by name or cuisine</h3><p class="muted">Type part of a name or pick a cuisine to narrow the list.</p><span class="arrow">Open search</span></a>
+   <a class="card" href="boroughs.html"><img class="dish" src="assets/img/restaurant-03.jpg" alt="" width="140" height="140"><span class="tag">Group by</span><h3>Filter by borough</h3><p class="muted">See how many restaurants each borough has, then open one.</p><span class="arrow">View boroughs</span></a>
+   <a class="card" href="top-rated.html"><img class="dish" src="assets/img/plate-salmon-sushi.webp" alt="" width="140" height="140"><span class="tag">Aggregate</span><h3>Highest rated</h3><p class="muted">Ranked by average inspection score across all grades.</p><span class="arrow">See the top 10</span></a>
+  </div>
+ </div>
+</section>
+
+<section class="split">
+ <div class="wrap split-in">
+  <div>
+   <h2>Where the restaurants are</h2>
+   <p>Restaurant count per borough, grouped directly in MongoDB.</p>
+   <a class="btn white" href="boroughs.html">Explore boroughs</a>
+   <img class="photo" src="assets/img/restaurant-07.jpg" alt="Bright restaurant interior with blue ceiling and orange chairs" width="250" height="374">
+  </div>
+  <div class="bars-panel"><div id="bars"><p class="hint">Loading borough totals...</p></div></div>
+ </div>
+</section>
+
+</main>
+<script src="assets/js/config.js"></script><script src="assets/js/common.js"></script><script src="assets/js/carousel.js"></script><script src="assets/js/pages/home.js"></script></body></html>
